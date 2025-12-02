@@ -8,13 +8,11 @@
 
 
 学べること
-1. 桁の数字を抽出　例えば、１０で割って、０以上の場合は、その１０のあまりで最後の桁の数を取得し、さらに１０で徐算、０以下になるまで、次の桁の値を取り出す。
+1. 桁の数字を抽出 例えば、１０で割って、０以上の場合は、その１０のあまりで最後の桁の数を取得し、さらに１０で徐算、０以下になるまで、次の桁の値を取り出す。
 2. 文字列変換やリスト変換で、簡潔に記載、また、繰り返し処理箇所は、リスト内包表記でリストに直接格納できる。
 3. リストに変換することで、インデックス番号・フィルターリングなど拡張しやすくなる。例：odds = [i for i in range(10) if i % 2 == 1]
 
 """
-from cgi import print_directory
-from fcntl import FASYNC
 
 
 def arm_num(N):
@@ -32,13 +30,13 @@ def arm_num(N):
 
     return sum == N
 
+
 def arm_str(N):
     tempStr = str(N)
     sum = 0
     for item in tempStr:
         sum += int(item) ** len(tempStr)
     return sum == N
-
 
 
 def arm_str_refactor(N):
@@ -50,6 +48,3 @@ def arm_str_refactor(N):
 
 
 print(arm_str_refactor(153))
-
-
-
